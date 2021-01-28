@@ -8,12 +8,25 @@ To make a 'Pull Request' or 'PR,' you'll need to be a little familiar with Githu
 
 When possible, you should build the repository locally after making changes, to check that they look how you expect. In particular, mixing Markdown and JSX can be tricky!
 
+Dependencies: node, typically installed with node version manager (nvm).
+
 If you can't build the repository - that's ok. By creating a PR an automatic build should trigger, allowing you to view the branch. This isn't as fast as building locally, since it's harder to see the difference between each change, but it can be used for small changes or if you can't build locally.
 
 To build locally:
 Navigate to `covariants/web` and type the folowing commands:
 ```
-nvm use
+nvm install 14
+nvm use 14
+npm install yarn
+```
+
+
+```
+yarn install
+```
+
+You should now be able to start the yarn server with:
+```
 yarn dev
 ```
 This may take a while to build. Once finished, open a browser and navigate to `localhost:3000`. Note that navigating between pages may be slow: your computer is building each page as it needs them.
